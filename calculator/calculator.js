@@ -6,27 +6,28 @@ function subtract (a, b) {
 	return a - b;
 }
 
-function sum (...args) {
-	const sum = 0;
-	const arrayOfNumbers = Array.from(args[0]);
-	arrayOfNumbers.forEach(element => {
-		if(isNaN(element)){
-		sum += element;
+function sum (array) {
+	return array.reduce(((accumulator, currentValue) => accumulator + currentValue), 0);
+}
+
+function multiply (array) {
+	return array.reduce(((accumulator, currentValue) => accumulator * currentValue), 1);
+}
+
+function power(a,b) {
+	return Math.pow(a, b);
+}
+
+function factorial(number) {
+	if(number === 0){
+		return 1;
+	}else {
+		let result = 1;
+		for(i = number; i>0; i--){
+			result *= i; 
 		}
-	});
-	return sum;
-}
-
-function multiply () {
-	
-}
-
-function power() {
-	
-}
-
-function factorial() {
-	
+	return result;
+	}	
 }
 
 module.exports = {
