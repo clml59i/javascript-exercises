@@ -1,13 +1,20 @@
-function add () {
-	
+function add (a, b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a, b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (...args) {
+	const sum = 0;
+	const arrayOfNumbers = Array.from(args[0]);
+	arrayOfNumbers.forEach(element => {
+		if(isNaN(element)){
+		sum += element;
+		}
+	});
+	return sum;
 }
 
 function multiply () {
